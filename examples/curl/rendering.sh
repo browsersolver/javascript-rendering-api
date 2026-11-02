@@ -3,6 +3,6 @@
 # Usage: BROWSERSOLVER_API_KEY=your-key bash rendering.sh
 set -euo pipefail
 
-curl -sS -G "https://api.browsersolver.com/v1/website/rendering" \
+curl -sS --fail-with-body -G "https://api.browsersolver.com/v1/website/rendering" \
   -H "x-api-key: ${BROWSERSOLVER_API_KEY}" \
   --data-urlencode query=https://quotes.toscrape.com/js/
